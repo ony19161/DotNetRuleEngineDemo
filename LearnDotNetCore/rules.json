@@ -1,0 +1,19 @@
+[
+  {
+    "WorkflowName": "Username",
+    "Rules": [
+      {
+        "RuleName": "Required",
+        "ErrorMessage": "Username is required",
+        "Enabled": true,
+        "Expression": "Utils.CheckNullOrEmpty(userInfo.Username) == true"
+      },
+      {
+        "RuleName": "CheckFormat",
+        "ErrorMessage": "Username format is invalid",
+        "Enabled": true,
+        "Expression": "userInfo.Username.Length >= 6 AND  userInfo.Username.Length <= 15"
+      }
+    ]
+  }
+]
